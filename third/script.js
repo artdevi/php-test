@@ -1,19 +1,10 @@
-document.querySelector('#submit').addEventListener('click', function() {
-    let n = document.querySelector('#n-input').value;
-    alert(n);
+$('#submit').click(function() {
+    $('#object-container').empty();
+    n = $('#n-input').val()
+    for (i = 0; i < n; i++) {
+        $('#object-container').append('<img src="images/image.png" class="gopher" draggable="true">');
+    }
+    $(function () {
+        $(".gopher").draggable();
+    });
 });
-
-let gopher = document.querySelector('.gopher')
-
-let offsetX;
-let offsetY;
-
-gopher.addEventListener('dragstart', function(event) {
-    offsetX = event.offsetX;
-    offsetY = event.offsetY;
-})
-
-gopher.addEventListener('dragend', function(event) {
-    gopher.style.top = (event.pageY - offsetY) + 'px'
-    gopher.style.left = (event.pageX - offsetX) + 'px'
-})
