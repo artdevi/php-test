@@ -1,25 +1,25 @@
 <?php
 
 class LogData {
-    public $datetime;
+    public $Datetime;
     public $IP;
-    public $accURL;
-    public $visURL;
+    public $AccURL;
+    public $VisURL;
 
     public function __construct($date, $time, $ip, $accURL, $visURL)
     {
-        $this->datetime = $date . ' ' . $time;
-        $this->ip = $ip;
-        $this->accURL = $accURL;
-        $this->visURL = $visURL;
+        $this->Datetime = $date . ' ' . $time;
+        $this->IP = $ip;
+        $this->AccURL = $accURL;
+        $this->VisURL = $visURL;
     }
 
     public function PrintData()
     {
-        echo 'Datetime: ' . $this->datetime . '<br>';
-        echo 'IP: ' . $this->ip . '<br>';
-        echo 'Account URL: ' . $this->accURL . '<br>';
-        echo 'Visited URL: ' . $this->visURL . '<br>';
+        echo 'Datetime: ' . $this->Datetime . '<br>';
+        echo 'IP: ' . $this->IP . '<br>';
+        echo 'Account URL: ' . $this->AccURL . '<br>';
+        echo 'Visited URL: ' . $this->VisURL . '<br>';
         echo '<hr>';
     }
 }
