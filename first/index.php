@@ -18,14 +18,14 @@
 </head>
 <body>
     <form class="input-form" method="post">
-        <input name="set-1" pattern="^[\d\s]+$" type="text" class="set" id="set-1" placeholder="Set #1">
-        <input name="set-2" pattern="^[\d\s]+$" type="text" class="set" id="set-2" placeholder="Set #2">
+        <input name="set-1" required="true" pattern="[\d\s]+" type="text" class="set" id="set-1" placeholder="Set #1">
+        <input name="set-2" required="true" pattern="[\d\s]+" type="text" class="set" id="set-2" placeholder="Set #2">
         <select name="sort" class="sort-select">
             <option value="">ASC</option>
             <option value="">DESC</option>
         </select>
         <button type="submit" class="button" id="submit">OK</button>
-        <p>Введите множества, разделяя элементы пробелами.</p>
+        <p>Enter sets, separating elements with spaces</p>
     </form>
 </body>
 </html>
